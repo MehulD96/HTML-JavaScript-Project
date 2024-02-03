@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .button {
+            
+            width: 100px;
+            height: 70px;
+            border-radius: 5%;
+            border-width: 5px;
+            color: white;
+            margin-right: 15px;
+        }
+
+    </style>
+</head>
+<body>
+    <h1> Click the buttons below to change the background color of the page</h1>
+    <button class= "button" id = "grey" style="background-color: grey;" >Grey</button>
+    <button class= "button" id = "lightblue" style="background-color: lightblue;" >lightblue</button>
+    <button class= "button" id = "Black" style="background-color: black;">Black</button>
+    <button class= "button" id = "Olive" style="background-color: olivedrab;">Olive</button>
+
+
+    <script>
+        let button = document.querySelectorAll('.button');
+        const body = document.querySelector("body")
+
+        button.forEach((button) =>{
+            button.addEventListener('click', (e)=>{
+                if(e.target.id === 'grey'){
+                    body.style.backgroundColor = e.target.id;
+                }
+                if(e.target.id === 'lightblue'){
+                    body.style.backgroundColor = e.target.id;
+                }
+                if(e.target.id === 'Black'){
+                    body.style.backgroundColor = e.target.id;
+                }
+                if(e.target.id === 'Olive'){
+                    body.style.backgroundColor = e.target.id;
+                }
+            })
+        })
+    </script>
+</body>
+</html>
