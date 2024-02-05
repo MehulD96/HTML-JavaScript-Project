@@ -35,8 +35,6 @@
             <input type="text" id = "inp" value = text placeholder="type here">
             <button class="btn" onclick = "newele(document.getElementById('inp').value)">Submit</button>
             </div>
-
-            <div id="TextAreaBtn"></div>
         
             <script>
                 
@@ -54,16 +52,13 @@
                     div.appendChild(button)
                     console.log(div)
                     document.querySelector('.form').appendChild(div);
-                    const element = document.getElementById("TextAreaBtn");
+                    
 
                     button.addEventListener("click",(e)=>{
                         let elem = e.target
                         elem.parentNode.remove();
                     })
-                    div.appendChild(button)
                     
-                    element.appendChild(div);
-                 
                 }
 
             </script>
