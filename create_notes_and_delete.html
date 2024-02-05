@@ -1,0 +1,73 @@
+<!Doctype html>
+<html>
+    <head>
+        <style>
+            .red-button{
+                background-color: whitesmoke;
+                color:black;
+                border:black;
+            }
+            .yellow-button{
+                background-color:mediumslateblue;
+            }
+          
+            .frm {
+                padding: 20px;
+                position: absolute;
+                top: 100px;
+                left: 500px;
+                border: 3px solid orange;
+                Width: 250px;
+                height: 200px;
+                background-color: #42413Cad;
+            }
+        </style>
+        <link rel = "stylesheet-href= "style.css">
+    </head>
+    
+        <body>
+    
+            <h1 >Welcome to the notes making page</h1>
+
+            <br><br><br><br>
+            <div class = "form">
+            <label >Input text</label>
+            <input type="text" id = "inp" value = text placeholder="type here">
+            <button class="btn" onclick = "newele(document.getElementById('inp').value)">Submit</button>
+            </div>
+
+            <div id="TextAreaBtn"></div>
+        
+            <script>
+                
+                function newele(value){
+                    let div= document.createElement('div')
+                    div.setAttribute("className", value)
+                    let h1 = document.createElement('h1');
+                    h1.innerHTML = value;
+                    
+                    let button = document.createElement('button');
+                    button.setAttribute("className", value)
+                    button.innerHTML = "delete"
+
+                    div.appendChild(h1)
+                    div.appendChild(button)
+                    console.log(div)
+                    document.querySelector('.form').appendChild(div);
+                    const element = document.getElementById("TextAreaBtn");
+
+                    button.addEventListener("click",(e)=>{
+                        let elem = e.target
+                        elem.parentNode.remove();
+                    })
+                    div.appendChild(button)
+                    
+                    element.appendChild(div);
+                 
+                }
+
+            </script>
+        </body>
+        <title>skills_Build Training</title>
+       
+</html>
